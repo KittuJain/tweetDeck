@@ -2,7 +2,7 @@ exports.config = {
     files: {
         javascripts: {
             joinTo: {
-                'javascripts/app.js'   : /^app/,
+                'javascripts/app.js': /^app/,
                 'javascripts/vendor.js': /^(?!app)/
             }
         },
@@ -11,7 +11,7 @@ exports.config = {
     plugins: {
         babel: {presets: ['es2015', 'react']}
     },
-    server : {
+    server: {
         port: 5555
     }
 };

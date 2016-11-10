@@ -4,9 +4,11 @@ import App from 'pages/app'
 
 import {createStore, compose, applyMiddleware} from 'redux'
 import {routerForBrowser, RouterProvider} from 'redux-little-router'
-import reducers from './reducers'
 import { Provider } from 'react-redux'
+import thunkMiddleware from 'redux-thunk'
+import reducers from './reducers'
 import routes from './routes'
+
 
 const {
     routerEnhancer,
@@ -17,6 +19,7 @@ const store = createStore(
     reducers, // All reducers
     {}, // initial state
     compose(
+        applyMiddleware(thunkMiddleware),
         routerEnhancer, // Redux little router middleware
         applyMiddleware(routerMiddleware) // Redux little router middleware
     )

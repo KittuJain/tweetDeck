@@ -14,7 +14,7 @@ export default class App extends React.Component {
                     <Welcome />
                 </Fragment>
 
-                <Fragment forRoutes={["/deck"]}>
+                <Fragment forRoute='/deck'>
                     <Deck />
                 </Fragment>
             </div>
